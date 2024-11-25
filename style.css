@@ -1,0 +1,88 @@
+body{
+    background-image:url(/img/FCB_stadium.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 1600px 800px;
+    margin: 0;
+    padding: 0;
+}
+header{
+    
+}
+.navbar{
+    background-color:#004aad;
+    
+    display: flex;
+    align-items: center;
+    /* border-radius: 2rem; */
+    /* border: 2px solid; */
+   
+}
+.form_search{
+    
+        background-color: cadetblue;
+        
+        width: 25%;
+        height: 3rem;
+        padding-left: 1rem;
+        /* border: 2px solid; */
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+}
+.form_search input{
+    background-color: cadetblue;
+    border: 0;
+}
+.form_search button{
+    background-color: #0079ff;
+    cursor: pointer;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 0.6rem;
+    color: white;
+    border:0 ;
+}
+.form_search button:hover{
+    background-color: #0079ff;
+    opacity: 0.5; 
+}
+.navlist{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2rem;
+    margin-left: 1rem;
+}
+.navlist a{
+    color: white;
+    text-decoration: none;
+}
+.sign_btn button{
+    background-color: #0079ff;
+    cursor: pointer;
+    width: 6rem;
+    height: 3rem;
+    padding: 5px 10px;
+    border-radius: 0.6rem;
+    color: white;
+    font-family: bold;
+    font-size: large;
+    border:0 ;
+}
+.sign_btn{
+    margin-left: 6rem;
+}
+.sign_btn button:hover{
+    background-color: red;
+
+}
+.terrain{
+    margin-left:2rem ;
+    opacity: 0.9;
+   
+
+   
+}
+
+
