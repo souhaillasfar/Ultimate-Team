@@ -78,11 +78,61 @@ header{
 
 }
 .terrain{
+    display: grid;
+    grid-template-columns: 1.5fr 300px;
+    height: fit-content;
     margin-left:2rem ;
-    opacity: 0.9;
-   
-
-   
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+     
+}
+.formation{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 15rem;
+    height: 100vh;
+     
 }
 
 
+.select_box{
+    background-color: DodgerBlue;
+    color: white;
+    cursor: pointer;
+    
+}
+.select_box option{
+    text-align: center;
+    
+}
+
+.stadium{
+    background-image: url(/img/stadium.png);
+    background-size: cover;
+    opacity: 0.9;
+    /* width: 34rem; */
+    height: 100%;
+    
+}
+
+
+.boxbtn{
+    background-color: #0079ff;
+    width: 9rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    padding: 2px;
+    color: white;
+
+}
+
+.select_position{
+    background-color: #0079ff;
+    width: 9rem;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
