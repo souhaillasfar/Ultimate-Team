@@ -2,20 +2,96 @@ let players = [];
 const addPlayer = (ev)=>{
     ev.preventDefault();
     let player = {
-          id: Date.now(),
+        
           name: document.getElementById('name').value,
-          position: document.getElementById('position').value
+          position: document.getElementById('position').value,
+          defense: document.getElementById('DEF').value
     }
     players.push(player);
     document.querySelector('form').reset();
 
     console.warn('added',{players});
 
-    let pre = document.querySelector('#msg pre');
-    pre.textContent = '\n' +JSON.stringify(players, '\t' , 2);
+    // let pre = document.querySelector('#msg pre');
+    // pre.textContent = '\n' +JSON.stringify(players, '\t' , 2);
 
     localStorage.setItem('PlayersList',JSON.stringify(players))
 }
 document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('btn').addEventListener('click', addPlayer)
 })
+
+fetch('player.json')
+.then((Response)=> Response.json())
+.then(
+   PromiseRes => players.push(...PromiseRes.players)
+     
+   )
+   players.forEach(function play(player){
+    let card = document.createElement('div');
+    card.innerHTML = `
+    <div class="relative flex items-center justify-center w-full h-screen">
+                  <div class="relative w-[90px] h-[144px] bg-cover bg-center p-[0.8rem_0] bg-[url('https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png')] transition-all ease-in">
+                    <div class="relative flex text-[#e9cc74] px-[0.5rem]">
+                      <div class="absolute py-[0.3rem_0] text-xs uppercase font-light">
+                        <div class="text-[0.8rem] mt-2">${player.rating}</div>
+                        <div class="text-[0.7rem]">RW</div>
+                        <div class="block my-[0.1rem_0]">
+                          <img src="${player.flag}" alt="Argentina" class="w-[0.6rem] h-[10px] object-contain" />
+                        </div>
+                        <div class="block">
+                          <img src="${player.logo}" alt="Barcelona" class="w-[0.7rem] h-[12px] object-contain" />
+                        </div>
+                      </div>
+                      <div class="w-[52px] h-[52px] mx-auto overflow-hidden">
+                        <img src="${player.photo}" alt="Messi" class="w-full h-full object-contain relative right-[-0.5rem] bottom-0" />
+                        <div class="absolute right-0 bottom-[-0.4rem] w-full h-[1rem] text-right text-[#333] text-[0.4rem] font-bold uppercase">
+                          <span class="ml-[0.3rem] text-shadow-lg">${player.position}</span>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <div class="text-[#e9cc74] w-[70%] mx-auto">
+                        <div class="text-center text-[0.8rem] uppercase border-b-2 border-[#e9cc74]/[0.1] pb-[0.2rem]">
+                          <span class="block text-shadow-lg">${player.name}</span>
+                        </div>
+                        <div class="flex justify-center mt-[0.2rem]">
+                          <div class="pr-[0.6rem] border-r-2 border-[#e9cc74]/[0.1]">
+                            <div class="flex items-center text-[0.5rem] uppercase">
+                              <span class="font-bold mr-[0.2rem]">${player.pace}</span>
+                              <span class="font-light">PAC</span>
+                            </div>
+                            <div class="flex items-center text-[0.5rem] uppercase">
+                              <span class="font-bold mr-[0.2rem]">${player.shooting}</span>
+                              <span class="font-light">SHO</span>
+                            </div>
+                            <div class="flex items-center text-[0.5rem] uppercase">
+                              <span class="font-bold mr-[0.2rem]">${player.passing}</span>
+                              <span class="font-light">PAS</span>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="flex items-center text-[0.5rem] uppercase">
+                              <span class="font-bold mr-[0.2rem]">${player.dribbling}</span>
+                              <span class="font-light">DRI</span>
+                            </div>
+                            <div class="flex items-center text-[0.5rem] uppercase">
+                              <span class="font-bold mr-[0.2rem]">${player.defending}</span>
+                              <span class="font-light">DEF</span>
+                            </div>
+                            <div class="flex items-center text-[0.5rem] uppercase">
+                              <span class="font-bold mr-[0.2rem]">${player.physical}</span>
+                              <span class="font-light">PHY</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+</div>
+    `
+    players.appendChild(card)
+   })
+    console.log(players)
