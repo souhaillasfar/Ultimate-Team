@@ -118,9 +118,17 @@
           </div>
          </div>
 
-
+         
             <div class="formation ">
-              <form class="bg-gray-500 rounded-[0.5rem]">
+              <div class="mt-1 mb-2">
+                <h3 class=" text-white">Formation</h3>
+                <select class="select_box " style="width: 10rem;">
+                    <option value="1">4.3.3</option>
+                    <option value="2">4.4.2</option>
+                </select>
+              </div>
+
+      <form class="bg-gray-500 rounded-[0.5rem]">
               <div >
                 <label for="name" class="text-white ml-3 mt-3">Nom du joueur :</label><br>
                 <input type="text" class="w-32 ml-3 mt-3" id="name" placeholder="Nom du joueur">
@@ -141,28 +149,36 @@
                 </select>
               </div>
               <div>
-                <label for="Defense" class="text-white mt-3 ml-3">Defense</label>
-                <input type="text" class="w-32 mt-3 ml-3" id="DEF" placeholder="def">
+                <label for="Defense" class="text-white mt-3 ml-3">Defending:</label>
+                <input type="text" class="w-32 mt-3 ml-3" id="def" placeholder="def">
               </div>
               <div>
-                <label for="Defense" class="text-white mt-3 ml-3">Defense</label>
-                <input type="text" class="w-32 mt-3 ml-3" id="DEF" placeholder="def">
+                <label for="Defense" class="text-white mt-3 ml-3">shooting:</label>
+                <input type="text" class="w-32 mt-3 ml-3" id="sho" placeholder="sho">
               </div>
               <div>
-                <label for="Defense" class="text-white mt-3 ml-3">Defense</label>
-                <input type="text" class="w-32 mt-3 ml-3" id="DEF" placeholder="def">
+                <label for="Defense" class="text-white mt-3 ml-3">Pace:</label>
+                <input type="text" class="w-32 mt-3 ml-3" id="pac" placeholder="pac">
               </div>
               <div>
-                <label for="Defense" class="text-white mt-3 ml-3">Defense</label>
-                <input type="text" class="w-32 mt-3 ml-3" id="DEF" placeholder="def">
+                <label for="Defense" class="text-white mt-3 ml-3">Passing:</label>
+                <input type="text" class="w-32 mt-3 ml-3" id="pas" placeholder="pas">
               </div>
               <div>
-                <label for="Defense" class="text-white mt-3 ml-3">Defense</label>
-                <input type="text" class="w-32 mt-3 ml-3" id="DEF" placeholder="def">
+                <label for="Defense" class="text-white mt-3 ml-3">dribbling:</label>
+                <input type="text" class="w-32 mt-3 ml-3" id="dri" placeholder="dri">
               </div>
               <div>
-                <label for="Defense" class="text-white mt-3 ml-3">Defense</label>
-                <input type="text" class="w-32 mt-3 ml-3" id="DEF" placeholder="def">
+                <label for="Defense" class="text-white mt-3 ml-3">physical:</label>
+                <input type="text" class="w-32 mt-3 ml-3" id="phy" placeholder="phy">
+              </div>
+              <div>
+                <label for="Defense" class="text-white mt-3 ml-3">rating</label>
+                <input type="text" class="w-32 mt-3 ml-3" id="rat" placeholder="rat">
+              </div>
+              <div>
+                <label for="Defense" class="text-white mt-3 ml-3">Photo du joueur:</label>
+                <input type="input" class="w-32 mt-3 ml-3 text-center" id="pic" placeholder="image url" >
               </div>
 
 
@@ -171,16 +187,10 @@
                 <button id="btn">Ajouter un joueur</button>
               </div>
               
-</form>
-            <div>
-                <h3 class="mt-2 text-white">Formation</h3>
-                <select class="select_box " style="width: 10rem;">
-                    <option value="1">4.3.3</option>
-                    <option value="2">4.4.2</option>
-                </select>
-              </div>
-            
-            
+</form>  
+<!-- <div id="msg">
+  <pre></pre> -->
+</div>
                 <!-- <div class="relative flex items-center justify-center w-full h-screen">
                   <div class="relative w-[90px] h-[144px] bg-cover bg-center p-[0.8rem_0] bg-[url('https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png')] transition-all ease-in">
                     <div class="relative flex text-[#e9cc74] px-[0.5rem]">
@@ -241,12 +251,9 @@
                     </div>
                   </div>
                 </div> -->
-</div>
-            
-              
-           
-            
+</div>       
         </section>
+
    
 
   <script src="./JS/script.js"></script>  

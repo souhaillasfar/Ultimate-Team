@@ -5,7 +5,14 @@ const addPlayer = (ev)=>{
         
           name: document.getElementById('name').value,
           position: document.getElementById('position').value,
-          defense: document.getElementById('DEF').value
+          defending: document.getElementById('def').value,
+          shooting: document.getElementById('sho').value,
+          pace: document.getElementById('pac').value,
+          passing: document.getElementById('pas').value,
+          dribbling: document.getElementById('dri').value,
+          physical: document.getElementById('phy').value,
+          rating: document.getElementById('rat').value,
+          photo: document.getElementById('pic').value
     }
     players.push(player);
     document.querySelector('form').reset();
