@@ -121,7 +121,7 @@ fetch('player.json')
   
       console.log(players);
   }
-  function filtrerparposition(div,pos){
-    let tempdata =
-  }
+//   function filtrerparposition(div,pos){
+//     let tempdata =
+//   }
     
