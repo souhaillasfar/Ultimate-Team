@@ -1,64 +1,69 @@
-body{
-    background-image:url(/img/FCB_stadium.jpg) ;
+body {
+    background-image: url(/img/FCB_stadium.jpg);
     background-repeat: no-repeat;
-    /* background-size: 1600px 800px; */
     margin: 0;
     padding: 0;
 }
-header{
-    
-}
-.navbar{
-    background-color:#004aad;
-    
+
+
+
+.navbar {
+    background-color: #004aad;
     display: flex;
     align-items: center;
-    /* border-radius: 2rem; */
-    /* border: 2px solid; */
-   
+    padding: 0.5rem;
+    justify-content: space-between;
 }
-.form_search{
-    
-        background-color: cadetblue;
-        
-        width: 25%;
-        height: 3rem;
-        padding-left: 1rem;
-        /* border: 2px solid; */
-        border-radius: 0.5rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
+
+.form_search {
+    background-color: cadetblue;
+    width: 25%;
+    height: 3rem;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
 }
-.form_search input{
+
+.form_search input {
     background-color: cadetblue;
     border: 0;
+    padding: 0.5rem;
 }
-.form_search button{
+
+.form_search button {
     background-color: #0079ff;
     cursor: pointer;
     height: 100%;
     padding: 5px 10px;
     border-radius: 0.6rem;
     color: white;
-    border:0 ;
+    border: 0;
 }
-.form_search button:hover{
-    background-color: #0079ff;
-    opacity: 0.5; 
+
+.form_search button:hover {
+    opacity: 0.8;
 }
-.navlist{
+
+.navlist {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     margin-left: 1rem;
 }
-.navlist a{
+
+.navlist a {
     color: white;
     text-decoration: none;
 }
-.sign_btn button{
+
+.sign_btn {
+    margin-left: 6rem;
+}
+
+.sign_btn button {
     background-color: #0079ff;
     cursor: pointer;
     width: 6rem;
@@ -68,60 +73,51 @@ header{
     color: white;
     font-family: bold;
     font-size: large;
-    border:0 ;
+    border: 0;
 }
-.sign_btn{
-    margin-left: 6rem;
-}
-.sign_btn button:hover{
-    background-color: red;
 
+.sign_btn button:hover {
+    background-color: red;
 }
-.terrain{
+
+.terrain {
     display: grid;
     grid-template-columns: 1.5fr 300px;
     gap: 1rem;
     height: fit-content;
-    margin-left:2rem ;
+    margin-left: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-     
 }
-.formation{
-    /* background-color: red; */
+
+.formation {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     width: 15rem;
     height: 100vh;
-     
 }
 
-
-.select_box{
+.select_box {
     background-color: DodgerBlue;
     color: white;
     cursor: pointer;
-    
 }
-.select_box option{
+
+.select_box option {
     text-align: center;
-    
 }
 
-.stadium{
+.stadium {
     background-image: url(/img/stadium.png);
-    background-size:100% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-
     opacity: 0.9;
     width: 100%;
     height: 52rem;
-    
 }
 
-
-.boxbtn{
+.boxbtn {
     background-color: #0079ff;
     width: 9rem;
     height: 2rem;
@@ -129,47 +125,160 @@ header{
     text-align: center;
     padding: 2px;
     color: white;
-
 }
 
-.select_position{
+.select_position {
     background-color: #0079ff;
     width: 9rem;
     border: 0;
     color: white;
     cursor: pointer;
 }
-.carta{
-   display: grid;
-   grid-template-columns: repeat(3,1fr);
-   justify-content: center;
-   align-items: center;
-    border: 2px solid;
-    position: relative;
-  
-}
-.carta2{
+
+.carta {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-     border: 2px solid;
-     position: relative;
-   
- }
-.banchlist{
+    /* border: 2px solid; */
+    position: relative;
+}
+
+.carta2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid; */
+    position: relative;
+}
+
+.banchlist {
     background-color: white;
     display: grid;
-    grid-template-columns:repeat(8,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     width: 80%;
     height: 42rem;
-    
-    border: 2px solid;
-    
+    /* border: 2px solid; */
 }
-.btnCar{
-    cursor: pointer;
-    
-}  
 
+.btnCar {
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form_search {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .sign_btn {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .terrain {
+        grid-template-columns: 1fr;
+        margin-left: 1rem;
+    }
+
+    .formation {
+        width: 100%;
+    }
+
+    .carta {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .carta2 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .banchlist {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .select_box {
+        width: 100%;
+    }
+
+    .boxbtn {
+        width: 100%;
+    }
+
+    .select_position {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .form_search {
+        width: 100%;
+    }
+
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .sign_btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .terrain {
+        grid-template-columns: 1fr;
+    }
+
+    .formation {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .carta {
+        grid-template-columns: 1fr;
+    }
+
+    .carta2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .banchlist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .select_box {
+        width: 100%;
+    }
+
+    .boxbtn {
+        width: 100%;
+    }
+
+    .select_position {
+        width: 100%;
+    }
+}
