@@ -157,4 +157,19 @@ header{
      position: relative;
    
  }
+.banchlist{
+    background-color: white;
+    display: grid;
+    grid-template-columns:repeat(8,1fr);
+    grid-template-rows: repeat(4,1fr);
+    width: 80%;
+    height: 42rem;
+    
+    border: 2px solid;
+    
+}
+.btnCar{
+    cursor: pointer;
+    
+}  
 
